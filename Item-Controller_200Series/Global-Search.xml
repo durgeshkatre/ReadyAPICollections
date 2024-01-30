@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="c03cf5cd-65e3-413b-877b-c8ffa695b857" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Global Search" searchProperties="true" timeout="0" zephyrTestName="WES-1670" zephyrTestId="37233">
+  <con:settings id="84bcde58-a4ec-4e22-85e2-f433a27e31d0">
+    <con:setting id="IncludeOverview">true</con:setting>
+    <con:setting id="IncludeResults">true</con:setting>
+    <con:setting id="FlowLayout">false</con:setting>
+    <con:setting id="ErrorDetails">true</con:setting>
+    <con:setting id="IncludeCoverage">true</con:setting>
+    <con:setting id="GeneratableAllureReport@Folder">D:\KPI_Project\ReadyAPI\ProjectsReadyAPI\TestResults</con:setting>
+    <con:setting id="GeneratableJUnitReport@Style">Multiple Pages</con:setting>
+    <con:setting id="GeneratableJUnitReport@Folder">D:\KPI_Project\ReadyAPI\ProjectsReadyAPI\TestResults</con:setting>
+    <con:setting id="c03cf5cd-65e3-413b-877b-c8ffa695b857fileName">Global-Search</con:setting>
+  </con:settings>
+  <con:testStep type="datasource" name="Data Source 200 Series" id="55e8a72a-70a1-4fa9-abee-490955021f8f">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file>C:/Users/apiuser1/WES-ReadyAPIAutomation/ItemTestData.xlsx</file>
+          <worksheet>200</worksheet>
+          <cell>A2</cell>
+          <ignoreEmpty>false</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>Global Search</con:property>
+      <con:property>Search Item by Item id</con:property>
+      <con:property>FieldName</con:property>
+      <con:property>FieldType</con:property>
+      <con:property>Type</con:property>
+      <con:property>Value</con:property>
+      <con:property>valueTo</con:property>
+      <con:property>Operator</con:property>
+      <con:property>ItemAlternateId</con:property>
+      <con:property>Alternate</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Global Search" id="17ae33b2-9246-4f99-8453-ff22c373b3c6">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="${#Project#baseUrl}" resourcePath="/v1/items" methodName="Items" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Global Search" id="da4e362b-6452-4923-a7f3-4056168a6e3f" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>${#Project#baseUrl}</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://wes-dev.kpiopto.com/item/v1/items</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="92bc8c9c-2676-47fb-9af5-ce7d1ef322c2" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:parameterOrder>
+          <con:entry>query</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="e2650707-598d-483d-8cfe-a3e04b5a5d8b">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2cdb61a5-9ec3-419e-8126-00a4dce7e52f">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>55e8a72a-70a1-4fa9-abee-490955021f8f</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>17ae33b2-9246-4f99-8453-ff22c373b3c6</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="8cefbbe2-1d83-42db-8753-496fb49045ab" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Search Item by Filter" searchProperties="true" timeout="0" zephyrTestName="WES-1676" zephyrTestId="37239">
+  <con:settings id="d95865cd-39f8-4955-af6f-675474e53553">
+    <con:setting id="8cefbbe2-1d83-42db-8753-496fb49045abfileName">Search-Item-by-Filter</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Search Item by Filter" id="698260b0-d6dc-4ee6-8b13-897638592991">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="${#Project#baseUrl}" resourcePath="/v1/items/search" methodName="Search" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Search Item by Filter" id="d7d41a7f-9f36-4bf2-8c28-0a1093978dee" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>${#Project#baseUrl}</con:endpoint>
+        <con:request>[{
+  "fieldName": "${#[Item-Controller#Global Search#Data Source 200 Series]#FieldName}",
+  "fieldType": "${#[Item-Controller#Global Search#Data Source 200 Series]#FieldType}",
+  "filter": {
+    "type": "${#[Item-Controller#Global Search#Data Source 200 Series]#Type}",
+    "value": "${#[Item-Controller#Global Search#Data Source 200 Series]#Value}",
+      "valueTo":"${#[Item-Controller#Global Search#Data Source 200 Series]#valueTo}"
+  },
+  "operator": "${#[Item-Controller#Global Search#Data Source 200 Series]#Operator}"
+}
+]</con:request>
+        <con:originalUri>http://wes-qa.kpiopto.com/item/v1/items/search</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="53cb6af3-aef1-4ebd-b08e-8cc066966318" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>500</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="Accept" value="${Data Source 2#Accept}"/>
+          <con:entry key="Content-Type" value="${Data Source 2#Content-Type}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>Content-Type</con:entry>
+          <con:entry>Accept</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="e2650707-598d-483d-8cfe-a3e04b5a5d8b">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2cdb61a5-9ec3-419e-8126-00a4dce7e52f">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

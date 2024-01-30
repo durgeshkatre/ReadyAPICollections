@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="c94dde78-2363-416b-8ba3-14b8a859a30b" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Global Search" searchProperties="true" timeout="0" zephyrTestName="WES-1671" zephyrTestId="37234">
+  <con:settings id="72617510-971c-4c5c-930b-415ed50e38ce">
+    <con:setting id="c94dde78-2363-416b-8ba3-14b8a859a30bfileName">Global-Search</con:setting>
+  </con:settings>
+  <con:testStep type="datasource" name="Data Source 400 Series" id="fbe55be4-7154-4687-b90b-ea2d5a75310e">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataSourceStep">
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file>C:/Users/apiuser1/WES-ReadyAPIAutomation/ItemTestData.xlsx</file>
+          <worksheet>400</worksheet>
+          <cell>A2</cell>
+          <ignoreEmpty>true</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>Global Search</con:property>
+      <con:property>Search Item by Item id</con:property>
+      <con:property>FieldName</con:property>
+      <con:property>FieldType</con:property>
+      <con:property>Type</con:property>
+      <con:property>Value</con:property>
+      <con:property>valueTo</con:property>
+      <con:property>Operator</con:property>
+      <con:property>ItemAlternateId</con:property>
+      <con:property>Alternate</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Global Search" id="9ce48b0a-0223-479e-902d-9e0d6ec31bbe">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="${#Project#baseUrl}" resourcePath="/v1/items" methodName="Items" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Global Search" id="da4e362b-6452-4923-a7f3-4056168a6e3f" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>${#Project#baseUrl}</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://wes-dev.kpiopto.com/item/v1/items</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="92bc8c9c-2676-47fb-9af5-ce7d1ef322c2" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>404</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="query" value="${Data Source 400 Series#Global Search}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>query</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="e2650707-598d-483d-8cfe-a3e04b5a5d8b">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2cdb61a5-9ec3-419e-8126-00a4dce7e52f">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

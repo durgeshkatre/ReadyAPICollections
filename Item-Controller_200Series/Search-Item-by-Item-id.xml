@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="949389cd-c053-4860-a4fb-62a8c6c1f781" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Search Item by Item id" searchProperties="true" timeout="0" zephyrTestName="WES-1667" zephyrTestId="37230">
+  <con:settings id="db5bd912-d0b5-4107-b849-594aaf471c48">
+    <con:setting id="949389cd-c053-4860-a4fb-62a8c6c1f781fileName">Search-Item-by-Item-id</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Search Item by Item id" id="e955b487-eae3-4dab-90ca-e64764ae8689">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="${#Project#baseUrl}" resourcePath="/v1/items/{:itemId}" methodName=":itemId" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Search Item by Item id" id="44b78fb4-d8e0-4782-9efc-6781baaf0477" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>${#Project#baseUrl}</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://wes-qa.kpiopto.com/item/v1/items/1</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="a92e66e0-1bc8-41d5-b0f4-195e9778ef4b" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key=":itemId" value="${Global Search#Response#$['resource'][0]['itemId']}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>Accept</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="e2650707-598d-483d-8cfe-a3e04b5a5d8b">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2cdb61a5-9ec3-419e-8126-00a4dce7e52f">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

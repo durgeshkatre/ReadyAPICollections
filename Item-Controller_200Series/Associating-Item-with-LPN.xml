@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="57d7f8d9-1810-4dfc-8b01-cbce395bc6d4" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Associating Item with LPN" searchProperties="true" timeout="0" zephyrTestName="WES-1679" zephyrTestId="37242">
+  <con:settings id="551dba11-2c1e-4f41-8776-910679c19cf5">
+    <con:setting id="57d7f8d9-1810-4dfc-8b01-cbce395bc6d4fileName">Associating-Item-with-LPN</con:setting>
+  </con:settings>
+  <con:testStep type="datagen" name="DataGen" id="00d1c208-35d2-4122-97d6-ab8e46064641">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="con:DataGeneratorStep">
+      <con:property type="Number">
+        <con:configuration>
+          <start>100</start>
+          <end>100000</end>
+          <step/>
+          <pattern/>
+          <random>true</random>
+          <persist>false</persist>
+        </con:configuration>
+        <con:name>AlternameName</con:name>
+        <con:mode>STEP</con:mode>
+        <con:shared>false</con:shared>
+      </con:property>
+      <con:property type="Number">
+        <con:configuration>
+          <start>1</start>
+          <end>1000</end>
+          <step/>
+          <pattern/>
+          <random>true</random>
+          <persist>false</persist>
+        </con:configuration>
+        <con:name>AlternameType</con:name>
+        <con:mode>STEP</con:mode>
+        <con:shared>false</con:shared>
+      </con:property>
+      <con:property type="List">
+        <con:configuration>
+          <value>71 ST. NICHOLAS DRIVE</value>
+          <value>356 OLD STEESE HWY</value>
+          <value>3576 AIRPORT WAY</value>
+          <value>9400 GLACIER HWY</value>
+          <value>201 KATLIAN ST</value>
+          <value>2417 TONGASS AVE</value>
+          <value>402 W. MARINE WAY</value>
+          <value>501 C NORTH HERVEY</value>
+          <value>344 HIGHWAY 425 NORTH</value>
+          <value>2203 S PROMENADE BLVD</value>
+          <value>2219 PARK AVENUE</value>
+          <random>true</random>
+        </con:configuration>
+        <con:name>address1</con:name>
+        <con:mode>STEP</con:mode>
+        <con:shared>false</con:shared>
+      </con:property>
+      <con:property type="List">
+        <con:configuration>
+          <value>SUITE 100 - SHIPS BUILDING</value>
+          <value>COTTONWOOD CREEK MALL</value>
+          <value>SUITE 332 DEL AMO FASHION CENTER</value>
+          <value>STE 101 B AND C</value>
+          <value>INTERSECTION OF TAMARACK AND FREDRICA ST</value>
+          <value>HINKLEVILLE RETAIL (KY OAKS)</value>
+          <value>INTERSECTION OF 431 AND EVERLY BROS BLVD</value>
+          <value>BURLINGTON MALL S2113</value>
+          <value>NORTHSHORE MALL</value>
+          <value>HURON CREST PLAZA</value>
+          <value>#KI-06 - MILLER HILL MALL</value>
+          <value>US HIGHWAY 202 - SPACE 17</value>
+          <value>BRIDGEWATER COMMONS</value>
+          <random>false</random>
+        </con:configuration>
+        <con:name>address2</con:name>
+        <con:mode>STEP</con:mode>
+        <con:shared>false</con:shared>
+      </con:property>
+      <con:property type="List">
+        <con:configuration/>
+        <con:name>address3</con:name>
+        <con:mode>STEP</con:mode>
+        <con:shared>false</con:shared>
+      </con:property>
+      <con:property type="List">
+        <con:configuration/>
+        <con:name>city</con:name>
+        <con:mode>STEP</con:mode>
+        <con:shared>false</con:shared>
+      </con:property>
+      <con:property type="List">
+        <con:configuration/>
+        <con:name>state</con:name>
+        <con:mode>STEP</con:mode>
+        <con:shared>false</con:shared>
+      </con:property>
+      <con:property type="List">
+        <con:configuration/>
+        <con:name>zipCode</con:name>
+        <con:mode>STEP</con:mode>
+        <con:shared>false</con:shared>
+      </con:property>
+      <con:property type="Number">
+        <con:configuration>
+          <start>9775683456</start>
+          <end>9999999999</end>
+          <step/>
+          <pattern/>
+          <random>true</random>
+          <persist>false</persist>
+        </con:configuration>
+        <con:name>phoneNo</con:name>
+        <con:mode>STEP</con:mode>
+        <con:shared>false</con:shared>
+      </con:property>
+      <con:property type="Number">
+        <con:configuration>
+          <start>1</start>
+          <end>10000</end>
+          <step/>
+          <pattern/>
+          <random>false</random>
+          <persist>true</persist>
+          <current>84</current>
+        </con:configuration>
+        <con:name>ContName</con:name>
+        <con:mode>STEP</con:mode>
+        <con:shared>false</con:shared>
+      </con:property>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Associating Item with LPN" id="1e070674-9a99-42f9-ac34-73d8f856cff0">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="${#Project#baseUrl}" resourcePath="/v1/items/associatelpn" methodName="Associatelpn" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Associating Item with LPN" id="dd46c286-4c61-452e-8a2e-e8e61465cdaf" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>${#Project#baseUrl}</con:endpoint>
+        <con:request>{
+  "created": "2023-06-26T10:29:30.046Z",
+  "modified": "2023-06-26T10:29:30.046Z",
+  "createdBy": "HOST",
+  "modifiedBy": "HOST",
+  "itemAlternateId": "621",
+  "alternate": "AltQA${DataGen#AlternameName}",
+  "itemId": "${Global Search#Response#$['resource'][0]['itemId']}",
+  "alternateType": "AltType${DataGen#AlternameType}"
+}</con:request>
+        <con:originalUri>http://wes-qa.kpiopto.com/item/v1/items/associatelpn</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="5e090e16-126e-496c-bfe1-c314a44abb23" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="Accept" value="*/*"/>
+          <con:entry key="Content-Type" value="application/json"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>Content-Type</con:entry>
+          <con:entry>Accept</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="e2650707-598d-483d-8cfe-a3e04b5a5d8b">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2cdb61a5-9ec3-419e-8126-00a4dce7e52f">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

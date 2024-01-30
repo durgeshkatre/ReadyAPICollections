@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="Search" path="/v1/items/search" id="91c2046d-0d1f-41f9-ba41-0ec46b8979d6">
+  <con:settings id="cdd275d7-91a4-413e-9cdc-212d4bdc8768">
+    <con:setting id="91c2046d-0d1f-41f9-ba41-0ec46b8979d6fileName">Search</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Search" id="d629e029-6412-43e8-b06c-266f8661b59a" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>Content-Type</con:name>
+        <con:value>application/json</con:value>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>Accept</con:name>
+        <con:value>*/*</con:value>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="FAULT">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>500 400</con:status>
+      <con:params/>
+      <con:element xmlns:sear="http://wes-qa.kpiopto.com/item/v1/items/search">sear:Fault</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:sear="http://wes-qa.kpiopto.com/item/v1/items/search">sear:Response</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>text/plain;charset=UTF-8</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>0</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:request name="Search Item by Filters" id="d7d41a7f-9f36-4bf2-8c28-0a1093978dee" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>${#Project#baseUrl}</con:endpoint>
+      <con:request><![CDATA[{
+  "pageRequest": {
+    "page": "<integer>",
+    "size": "<integer>",
+    "sort": [
+      "<string>",
+      "<string>"
+    ]
+  },
+  "fieldFilters": [
+    {
+      "fieldName": "<string>",
+      "fieldType": "NUMBER",
+      "filter": {
+        "type": "ENDS_WITH",
+        "value": "<string>",
+        "valueTo": "<string>"
+      },
+      "operator": "AND"
+    },
+    {
+      "fieldName": "<string>",
+      "fieldType": "NUMBER",
+      "filter": {
+        "type": "ENDS_WITH",
+        "value": "<string>",
+        "valueTo": "<string>"
+      },
+      "operator": "AND"
+    }
+  ]
+}]]></con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="Accept" value="*/*"/>
+        <con:entry key="Content-Type" value="application/json"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>Content-Type</con:entry>
+        <con:entry>Accept</con:entry>
+      </con:parameterOrder>
+      <con:environmentSpec>
+        <con:entry environmentId="e2650707-598d-483d-8cfe-a3e04b5a5d8b">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="2cdb61a5-9ec3-419e-8126-00a4dce7e52f">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="e2650707-598d-483d-8cfe-a3e04b5a5d8b">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="2cdb61a5-9ec3-419e-8126-00a4dce7e52f">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="e2650707-598d-483d-8cfe-a3e04b5a5d8b">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="2cdb61a5-9ec3-419e-8126-00a4dce7e52f">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:resource>

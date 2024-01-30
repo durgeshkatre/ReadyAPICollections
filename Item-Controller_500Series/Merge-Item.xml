@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="1f8ba095-ed1b-417f-8340-985dff533f32" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Merge Item" searchProperties="true" timeout="0" zephyrTestName="WES-1673" zephyrTestId="37236">
+  <con:settings id="3c501ac7-a6a9-4302-a51c-97eb4114650e">
+    <con:setting id="1f8ba095-ed1b-417f-8340-985dff533f32fileName">Merge-Item</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Merge Item" id="a59b8616-d4b6-4406-9cad-d42215ad50c9">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="${#Project#baseUrl}" resourcePath="/v1/items" methodName="Items 2" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Merge Item" id="0287d001-2d94-45fa-8c91-9ccd58cdded7" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+        </con:settings>
+        <con:endpoint>${#Project#baseUrl}</con:endpoint>
+        <con:request>{\r
+   "item" : "Item ${DataGen#AlternameName}",\r
+   "client" : {\r
+      "created" : "2023-04-07T18:00:21.777",\r
+      "modified" : "2023-04-05T19:08:35.203",\r
+      "createdBy" : "${#Global#createdBy}",\r
+      "modifiedBy" : "${#Global#modifiedBy}",\r
+      "clientId" : "${#Global#clientId}",\r
+      "client" : "${#Global#name}",\r
+      "name" : "${#Global#name}",\r
+      "address1" : "${#[Item-Controller#Associating Item with LPN#DataGen]#address1}",\r
+      "address2" : "${#[Item-Controller#Associating Item with LPN#DataGen]#address2}",\r
+      "address3" : "Test",\r
+      "city" : "Test",\r
+      "state" : "Test",\r
+      "country" : "Test",\r
+      "zipCode" : "Test123",\r
+      "phoneNo" : "Test123",\r
+      "emailAddress" : "Test",\r
+      "contactName" : "Test"\r
+   },\r
+   "description" : "Winco warehouse system",\r
+   "comment" : "winco items",\r
+   "imageUrl" : "https:bigkahunaburgerco.net/fries.jpg,",\r
+   "length" : 80.000,\r
+   "width" : 4.000,\r
+   "height" : 27.000,\r
+   "volume" : 0,\r
+   "weight" : 500.000,\r
+   "dimensionUnits" : "millimeter",\r
+   "weightUnits" : "gram",\r
+   "expirationDateControlled" : true,\r
+   "lotTrackingControlled" : true,\r
+   "handlingCode" : "Robotic",\r
+   "countClassification" : "A",\r
+   "itemType" : "Roll",\r
+   "attribute1" : "Attr1",\r
+   "attribute2" : "Attr2",\r
+   "attribute3" : "Attr3",\r
+   "attribute4" : "Attr4",\r
+   "attribute5" : "Attr5",\r
+   "unitsOfMeasure" : [\r
+      {\r
+         "name" : "Unit",\r
+         "quantity" : 1\r
+      },\r
+      {\r
+         "name" : "Pack",\r
+         "quantity" : 12\r
+      },\r
+      {\r
+         "name" : "Case",\r
+         "quantity" : 100\r
+      }\r
+   ],\r
+   "itemAlternateIds" : [\r
+      {\r
+         "alternateType" : "91547311-500",\r
+         "alternate" : "Dry Foods"\r
+      },\r
+      {\r
+         "alternateType" : "91547333-10000",\r
+         "alternate" : "Packet items"\r
+      }\r
+   ]\r
+}</con:request>
+        <con:originalUri>http://wes-qa.kpiopto.com/item/v1/items</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="c8bb4974-d6ef-4013-b0ab-ad26e69c177d" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>500</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="Accept" value="*/*"/>
+          <con:entry key="Content-Type" value="application/json"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>Content-Type</con:entry>
+          <con:entry>Accept</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="e2650707-598d-483d-8cfe-a3e04b5a5d8b">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2cdb61a5-9ec3-419e-8126-00a4dce7e52f">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

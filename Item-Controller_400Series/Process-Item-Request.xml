@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="8d904a1f-7fb2-455b-8489-2f353be8cac8" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Process Item Request" searchProperties="true" timeout="0" zephyrTestName="WES-1683" zephyrTestId="37246">
+  <con:settings id="cc3e2f0a-a072-4c77-81e4-8b26f1277f22">
+    <con:setting id="8d904a1f-7fb2-455b-8489-2f353be8cac8fileName">Process-Item-Request</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Process Item Request" id="e4b5c528-629f-41e0-989f-ae36fee3cd16">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="${#Project#baseUrl}" resourcePath="/v1/items/itemRequest" methodName="ItemRequest" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Process Item Request" id="50039ac4-e0f6-4b4d-a8df-88a95c898d6b" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>${#Project#baseUrl}</con:endpoint>
+        <con:request>{
+  "created": "2023-06-26T10:29:30.046Z",
+  "modified": "2023-06-26T10:29:30.046Z",
+  "createdBy": "HOST",
+  "modifiedBy": "HOST",
+  "itemIds": [
+    2@2
+  ]
+}</con:request>
+        <con:originalUri>http://wes-qa.kpiopto.com/item/v1/items/itemRequest</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="7a5068f2-8431-4287-823b-1e2cdd4470f4" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>400</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="Accept" value="application/json"/>
+          <con:entry key="Content-Type" value="application/json"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>Content-Type</con:entry>
+          <con:entry>Accept</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="e2650707-598d-483d-8cfe-a3e04b5a5d8b">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2cdb61a5-9ec3-419e-8126-00a4dce7e52f">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

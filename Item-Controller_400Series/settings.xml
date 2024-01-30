@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite xmlns:con="http://eviware.com/soapui/config" id="2f9c5fea-aacf-4814-a1fc-a8060d7cd23c" name="Item-Controller_400Series">
+  <con:settings id="0e7056ff-6658-48e2-83da-1c7695c69d91">
+    <con:setting id="2f9c5fea-aacf-4814-a1fc-a8060d7cd23cfileName">Item-Controller_400Series</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

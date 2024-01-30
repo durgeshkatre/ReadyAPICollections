@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name=":item" path="/v1/items/:clientId/:item" id="a322d42d-ccae-4974-a288-7ce1d06dcb4c">
+  <con:settings id="f4497aac-91e9-4e86-b5fc-ce62c037cd0c">
+    <con:setting id="a322d42d-ccae-4974-a288-7ce1d06dcb4cfileName">%3Aitem</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name=":item" id="e47f1a96-bf0b-4558-8630-23248e85e96f" method="DELETE">
+    <con:settings/>
+    <con:parameters/>
+    <con:request name="Delete Item by Item and Client Id" id="7b1000d7-6248-4efa-8338-74d1c3c5d522" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>${#Project#baseUrl}</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="e2650707-598d-483d-8cfe-a3e04b5a5d8b">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="2cdb61a5-9ec3-419e-8126-00a4dce7e52f">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="e2650707-598d-483d-8cfe-a3e04b5a5d8b">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="2cdb61a5-9ec3-419e-8126-00a4dce7e52f">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="e2650707-598d-483d-8cfe-a3e04b5a5d8b">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="2cdb61a5-9ec3-419e-8126-00a4dce7e52f">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:resource>

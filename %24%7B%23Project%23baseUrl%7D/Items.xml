@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config" name="Items" path="/v1/items" id="3778e41f-99d8-4df8-b276-71b212a0fc2f">
+  <con:settings id="ffac9a35-018c-44fd-9586-94b0f4d65122">
+    <con:setting id="3778e41f-99d8-4df8-b276-71b212a0fc2ffileName">Items</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Items" id="461237bb-b46a-448b-b9ee-b547205a1eee" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>query</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:item="http://wes-dev.kpiopto.com/item/v1/items">item:Response</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>0</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:element xmlns:item="http://wes-dev.kpiopto.com/item/v1/items">item:Fault</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>text/plain;charset=UTF-8</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:request name="Search Item by Query Parameter - Global Search" id="da4e362b-6452-4923-a7f3-4056168a6e3f" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>${#Project#baseUrl}</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder>
+        <con:entry>query</con:entry>
+      </con:parameterOrder>
+      <con:environmentSpec>
+        <con:entry environmentId="e2650707-598d-483d-8cfe-a3e04b5a5d8b">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="2cdb61a5-9ec3-419e-8126-00a4dce7e52f">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="e2650707-598d-483d-8cfe-a3e04b5a5d8b">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="2cdb61a5-9ec3-419e-8126-00a4dce7e52f">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:method name="Items 2" id="292f6957-dff8-435b-a887-0ee40a185157" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>Content-Type</con:name>
+        <con:value>application/json</con:value>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>Accept</con:name>
+        <con:value>*/*</con:value>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>0</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200 201</con:status>
+      <con:params/>
+      <con:element xmlns:item="http://wes-qa.kpiopto.com/item/v1/items">item:Response</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>text/plain;charset=UTF-8</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:element xmlns:item="http://wes-qa.kpiopto.com/item/v1/items">item:Fault</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType xsi:nil="true"/>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:request name="Merge Item" id="0287d001-2d94-45fa-8c91-9ccd58cdded7" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>${#Project#baseUrl}</con:endpoint>
+      <con:request><![CDATA[{
+  "item": "<string>",
+  "created": "<dateTime>",
+  "modified": "<dateTime>",
+  "createdBy": "<string>",
+  "modifiedBy": "<string>",
+  "itemId": "<long>",
+  "client": {
+    "created": "<dateTime>",
+    "modified": "<dateTime>",
+    "createdBy": "<string>",
+    "modifiedBy": "<string>",
+    "clientId": "<long>",
+    "client": "<string>",
+    "name": "<string>",
+    "address1": "<string>",
+    "address2": "<string>",
+    "address3": "<string>",
+    "city": "<string>",
+    "state": "<string>",
+    "country": "<string>",
+    "zipCode": "<string>",
+    "phoneNo": "<string>",
+    "emailAddress": "<string>",
+    "contactName": "<string>"
+  },
+  "description": "<string>",
+  "comment": "<string>",
+  "itemClass": {
+    "created": "<dateTime>",
+    "modified": "<dateTime>",
+    "createdBy": "<string>",
+    "modifiedBy": "<string>",
+    "itemClassId": "<long>",
+    "itemClass": "<string>"
+  },
+  "slotClass": {
+    "created": "<dateTime>",
+    "modified": "<dateTime>",
+    "createdBy": "<string>",
+    "modifiedBy": "<string>",
+    "slotClassId": "<long>",
+    "slotClass": "<string>"
+  },
+  "hazardClass": {
+    "created": "<dateTime>",
+    "modified": "<dateTime>",
+    "createdBy": "<string>",
+    "modifiedBy": "<string>",
+    "hazardClassId": "<long>",
+    "hazardClass": "<string>"
+  },
+  "segregationClass": {
+    "created": "<dateTime>",
+    "modified": "<dateTime>",
+    "createdBy": "<string>",
+    "modifiedBy": "<string>",
+    "segregationClassId": "<long>",
+    "segregationClass": "<string>"
+  },
+  "countClass": {
+    "created": "<dateTime>",
+    "modified": "<dateTime>",
+    "createdBy": "<string>",
+    "modifiedBy": "<string>",
+    "countClassId": "<long>",
+    "countClass": "<string>"
+  },
+  "imageUrl": "<string>",
+  "handlingCode": "<string>",
+  "weight": "<float>",
+  "weightUnitId": "<float>",
+  "expirationDataControlled": "<boolean>",
+  "height": "<float>",
+  "length": "<float>",
+  "width": "<float>",
+  "itemType": "<string>",
+  "dimensionUnitId": "<float>",
+  "volume": "<float>",
+  "volumeUnitId": "<integer>",
+  "lotTrackingController": "<boolean>",
+  "expirationDateControlled": "<boolean>",
+  "lotTrackingControlled": "<boolean>",
+  "fifoTrackingControlled": "<boolean>",
+  "topOffWindowInDays": "<boolean>",
+  "serialIdPattern": "<string>",
+  "minimumExpiryDaysRemaining": "<integer>",
+  "attribute1": "<string>",
+  "attribute2": "<string>",
+  "attribute3": "<string>",
+  "attribute4": "<string>",
+  "attribute5": "<string>",
+  "deletedAt": "<dateTime>",
+  "unitsOfMeasure": [
+    {
+      "created": "<dateTime>",
+      "modified": "<dateTime>",
+      "createdBy": "<string>",
+      "modifiedBy": "<string>",
+      "uomId": "<string>",
+      "name": "<string>",
+      "quantity": "<integer>",
+      "itemId": "<integer>"
+    },
+    {
+      "created": "<dateTime>",
+      "modified": "<dateTime>",
+      "createdBy": "<string>",
+      "modifiedBy": "<string>",
+      "uomId": "<string>",
+      "name": "<string>",
+      "quantity": "<integer>",
+      "itemId": "<integer>"
+    }
+  ],
+  "itemAlternateIds": [
+    {
+      "created": "<dateTime>",
+      "modified": "<dateTime>",
+      "createdBy": "<string>",
+      "modifiedBy": "<string>",
+      "itemAlternateId": "<long>",
+      "alternate": "<string>",
+      "itemId": "<long>",
+      "alternateType": "<string>"
+    },
+    {
+      "created": "<dateTime>",
+      "modified": "<dateTime>",
+      "createdBy": "<string>",
+      "modifiedBy": "<string>",
+      "itemAlternateId": "<long>",
+      "alternate": "<string>",
+      "itemId": "<long>",
+      "alternateType": "<string>"
+    }
+  ],
+  "deleted": "<boolean>"
+}]]></con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="Accept" value="*/*"/>
+        <con:entry key="Content-Type" value="application/json"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>Content-Type</con:entry>
+        <con:entry>Accept</con:entry>
+      </con:parameterOrder>
+      <con:environmentSpec>
+        <con:entry environmentId="e2650707-598d-483d-8cfe-a3e04b5a5d8b">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="2cdb61a5-9ec3-419e-8126-00a4dce7e52f">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:request>
+    <con:environmentSpec>
+      <con:entry environmentId="e2650707-598d-483d-8cfe-a3e04b5a5d8b">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+      <con:entry environmentId="2cdb61a5-9ec3-419e-8126-00a4dce7e52f">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:method>
+  <con:environmentSpec>
+    <con:entry environmentId="e2650707-598d-483d-8cfe-a3e04b5a5d8b">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="2cdb61a5-9ec3-419e-8126-00a4dce7e52f">
+      <con:authProfile>Inherit From Parent</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+</con:resource>

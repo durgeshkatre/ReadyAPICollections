@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" id="4bb617db-e8a7-43c4-9699-5857b2f4464f" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Merge Item" searchProperties="true" timeout="0" zephyrTestName="WES-1674" zephyrTestId="37237">
+  <con:settings id="214d7c3e-c65e-4327-8219-b6d862ab5b4e">
+    <con:setting id="4bb617db-e8a7-43c4-9699-5857b2f4464ffileName">Merge-Item</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Merge Item" id="051dffd7-ab67-4850-bf1c-7168d391c16b">
+    <con:settings/>
+    <con:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" service="${#Project#baseUrl}" resourcePath="/v1/items" methodName="Items 2" xsi:type="con:RestRequestStep">
+      <con:restRequest name="Merge Item" id="0287d001-2d94-45fa-8c91-9ccd58cdded7" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>${#Project#baseUrl}</con:endpoint>
+        <con:request>{
+   "item" : "Item ${DataGen#AlternameName}",
+   "client" : {
+      "created" : "2023-04-07T18:00:21.777",
+      "modified" : "2023-04-05T19:08:35.203",
+      "createdBy" : "${#Global#createdBy}",
+      "modifiedBy" : "${#Global#modifiedBy}",
+      "clientId" : "${#Global#clientId}",
+      "client" : "System",
+      "name" : "${#Global#name}",
+      "address1" : "${DataGen#address1}",
+      "address2" : "${DataGen#address2}",
+      "address3" : "Test",
+      "city" : "Test",
+      "state" : "Test",
+      "country" : "Test",
+      "zipCode" : "Test123",
+      "phoneNo" : "Test123",
+      "emailAddress" : "Test",
+      "contactName" : "Test"
+   },
+   "description" : "Winco warehouse system",
+   "comment" : "winco items",
+   "imageUrl" : "https:bigkahunaburgerco.net/fries.jpg,",
+   "length" : 80.000,
+   "width" : 4.000,
+   "height" : 27.000,
+   "volume" : 0,
+   "weight" : 500.000,
+   "dimensionUnits" : "millimeter",
+   "weightUnits" : "gram",
+   "expirationDateControlled" : true,
+   "lotTrackingControlled" : true,
+   "handlingCode" : "Robotic",
+   "countClassification" : "A",
+   "itemType" : "Roll",
+   "attribute1" : "Attr1",
+   "attribute2" : "Attr2",
+   "attribute3" : "Attr3",
+   "attribute4" : "Attr4",
+   "attribute5" : "Attr5",
+   "unitsOfMeasure" : [
+      {
+         "name" : "Unit",
+         "quantity" : 1
+      },
+      {
+         "name" : "Pack",
+         "quantity" : 12
+      },
+      {
+         "name" : "Case",
+         "quantity" : 100
+      }
+   ],
+   "itemAlternateIds" : [
+      {
+         "alternateType" : "91547311-500",
+         "alternate" : "Dry Foods"
+      },
+      {
+         "alternateType" : "91547333-10000",
+         "alternate" : "Packet items"
+      }
+   ]
+}</con:request>
+        <con:originalUri>http://wes-qa.kpiopto.com/item/v1/items</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="27732248-ba5b-4304-b9e6-fe50644a37b2" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>404</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="Accept" value="*/*"/>
+          <con:entry key="Content-Type" value="application/json"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>Content-Type</con:entry>
+          <con:entry>Accept</con:entry>
+        </con:parameterOrder>
+        <con:environmentSpec>
+          <con:entry environmentId="e2650707-598d-483d-8cfe-a3e04b5a5d8b">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+          <con:entry environmentId="2cdb61a5-9ec3-419e-8126-00a4dce7e52f">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
