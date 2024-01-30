@@ -1,0 +1,1948 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="affa460c-14a4-4a16-a22a-206d88f9e68a" created="3.45.0" activeEnvironment="QA" name="Work services 185_1" projectVersion="" updated="3.45.0 2023-04-03T14:41:27Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="c6d5ce36-ef61-4115-889b-f0612c44c2ca" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://wes-dev.kpiopto.com:53140tttt" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints/>
+    <con:environmentSpec>
+      <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+    <con:resource name="Work-lists" path="/work/v1/work-lists" id="c5090e5b-7c37-4e1a-8fc2-56f533be3dbe">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Work-lists" id="2afa0ab4-ae2a-4b4b-9122-f84659ab974e" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>201</con:status>
+          <con:params/>
+          <con:element xmlns:work="http://wes-dev.kpiopto.com/work/v1/work-lists">work:Response</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>500</con:status>
+          <con:params/>
+          <con:element xmlns:work="http://wes-dev.kpiopto.com/work/v1/work-lists">work:Fault</con:element>
+        </con:representation>
+        <con:request name="Create WorkList" id="110e532e-c613-4c15-a54e-645c248cd6e2" mediaType="application/json" postQueryString="false">
+          <con:settings/>
+          <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+          <con:request>{\r
+	"workList": "WareTeTranTRS2",\r
+	"workStatus": {\r
+		"workStatusId": 84\r
+	},\r
+	"workType": {\r
+		"workTypeId": 5\r
+	},\r
+	"isHot": false,\r
+	"comment": "Depends if MES sent a comment from host adapter pick list",\r
+	"workLines": [{\r
+		"workLine": "Transfertoware",\r
+		"workLineStatus": {\r
+			"workStatusId": 151\r
+		},\r
+		"quantity": 1,\r
+		"workOperations": [{\r
+			"workOperation": "Transfertoware|1",\r
+			"sourceLocationId": 1,\r
+			"destinationLocationId": 2,\r
+			"sourceContainerId": 3,\r
+			"destinationContainerId": 4,\r
+			"quantity": 1,\r
+			"workOperationStatus": {\r
+				"workStatusId": 204\r
+			}\r
+		}]\r
+	}]\r
+}</con:request>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:environmentSpec>
+        <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:resource>
+    <con:resource name="1257" path="/work/v1/work-lists/1257" id="834b1319-6ee0-427d-a67e-cd5d9afdac45">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="1257" id="89856bbc-226b-4e91-a0f4-6a13490945d1" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://wes-dev.kpiopto.com/work/v1/work-lists/1257">ns:Fault</con:element>
+        </con:representation>
+        <con:request name="GET with WorklistID" id="9a0a3087-5688-4c6b-8d92-33eb56f632c7" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:environmentSpec>
+        <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:resource>
+    <con:resource name="1186" path="/work/v1/work-lists/1186" id="032799d4-5d10-4b67-a7b8-ef89c3bfce25">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="1186" id="9bb6dfce-4c85-4da0-bedb-3cb789df2142" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://wes-dev.kpiopto.com/work/v1/work-lists/1186">ns:Fault</con:element>
+        </con:representation>
+        <con:request name="Update worklist" id="1ab26b1f-5ca6-4ca8-8bba-6eaebf8fb06a" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+          <con:request>{\r
+	"workList": "WareTeTranTRS3up",\r
+	"workStatus": {\r
+		"workStatusId": 84\r
+	},\r
+	"workType": {\r
+		"workTypeId": 5\r
+	},\r
+	"isHot": false,\r
+	"comment": "Depends if MES sent a comment from host adapter pick list to WES",\r
+	"workLines": [{\r
+		"workLine": "WaresTransfersup",\r
+		"workLineStatus": {\r
+			"workStatusId": 152\r
+		},\r
+		"quantity": 1,\r
+		"workOperations": [{\r
+			"workOperation": "wareTransferLiup|3",\r
+			"sourceLocationId": 1,\r
+			"destinationLocationId": 2,\r
+			"sourceContainerId": 3,\r
+			"destinationContainerId": 4,\r
+			"quantity": 1,\r
+			"workOperationStatus": {\r
+				"workStatusId": 204\r
+			}\r
+		}]\r
+	}]\r
+}</con:request>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:method name="1186 2" id="e04a254f-0446-4b07-9f4a-e3719f470cdc" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element xmlns:ns="http://wes-dev.kpiopto.com/work/v1/work-lists/1186">ns:Fault</con:element>
+        </con:representation>
+        <con:request name="Update worklist Copy" id="049b1bc1-fdc2-4764-b7f7-fbafb005a620" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+          <con:request>{\r
+	"created": "2023-05-10T13:38:38.527",\r
+	"modified": null,\r
+	"createdBy": "HOST",\r
+	"modifiedBy": "dom",\r
+	"workListId": 1155,\r
+	"clientId": null,\r
+	"workList": "WB-TL002",\r
+	"workStatus": {\r
+		"created": null,\r
+		"modified": null,\r
+		"createdBy": null,\r
+		"modifiedBy": null,\r
+		"workStatusId": 94,\r
+		"workTier": "WorkList",\r
+		"workTypeId": 5,\r
+		"workStatusValue": "COMPLETE",\r
+		"isEnabled": true\r
+	},\r
+	"workType": {\r
+		"created": null,\r
+		"modified": null,\r
+		"createdBy": null,\r
+		"modifiedBy": null,\r
+		"workTypeId": 5,\r
+		"workTypeValue": "Transfer",\r
+		"isEnabled": true,\r
+		"workSubTypeList": []\r
+	},\r
+	"workSubType": null,\r
+	"isHot": true,\r
+	"priority": 1,\r
+	"priorityDateTime": null,\r
+	"storageId": null,\r
+	"workBatchId": 1004,\r
+	"storageTypeId": null,\r
+	"comment": "Depends if MES sent a comment from host pick list",\r
+	"scheduled": null,\r
+	"started": null,\r
+	"completed": null,\r
+	"attribute1": null,\r
+	"attribute2": null,\r
+	"attribute3": null,\r
+	"attribute4": null,\r
+	"attribute5": null,\r
+	"workLines": [\r
+		{\r
+			"created": "2023-05-10T13:38:38.67",\r
+			"modified": null,\r
+			"createdBy": "HOST",\r
+			"modifiedBy": "dom",\r
+			"workLineId": 5119,\r
+			"workListId": 1155,\r
+			"workLine": "WB-TL002|1",\r
+			"workLineStatus": {\r
+				"created": null,\r
+				"modified": null,\r
+				"createdBy": null,\r
+				"modifiedBy": null,\r
+				"workStatusId": 155,\r
+				"workTier": "WorkLine",\r
+				"workTypeId": 5,\r
+				"workStatusValue": "COMPLETE",\r
+				"isEnabled": true\r
+			},\r
+			"priority": null,\r
+			"itemId": null,\r
+			"quantity": 1,\r
+			"quantityCompleted": 0,\r
+			"inventoryStatusId": null,\r
+			"expirationDate": null,\r
+			"fifoDate": null,\r
+			"stockRotationDate": null,\r
+			"lot": null,\r
+			"storageTypeId": null,\r
+			"comment": null,\r
+			"started": null,\r
+			"completed": null,\r
+			"attribute1": null,\r
+			"attribute2": null,\r
+			"attribute3": null,\r
+			"attribute4": null,\r
+			"attribute5": null,\r
+			"workOperations": [\r
+				{\r
+					"created": "2023-05-10T13:38:38.813",\r
+					"modified": null,\r
+					"createdBy": "HOST",\r
+					"modifiedBy": "dom",\r
+					"workOperationId": 63,\r
+					"workListId": 1155,\r
+					"workLineId": 5119,\r
+					"workOperation": "WB-TL002|1|1",\r
+					"sourceLocationId": 1,\r
+					"destinationLocationId": 2,\r
+					"sourceContainerId": 3,\r
+					"destinationContainerId": 4,\r
+					"activityId": null,\r
+					"quantity": 1,\r
+					"inventoryStatusId": null,\r
+					"expirationDate": null,\r
+					"fifoDate": null,\r
+					"stockRotationDate": null,\r
+					"lot": null,\r
+					"storageTypeId": null,\r
+					"comment": null,\r
+					"workOperationStatus": {\r
+						"created": null,\r
+						"modified": null,\r
+						"createdBy": null,\r
+						"modifiedBy": null,\r
+						"workStatusId": 209,\r
+						"workTier": "WorkOperation",\r
+						"workTypeId": 5,\r
+						"workStatusValue": "CANCELED",\r
+						"isEnabled": true\r
+					},\r
+					"workStationId": null,\r
+					"started": null,\r
+					"ownedBy": null,\r
+					"completed": null,\r
+					"completedBy": null,\r
+					"attribute1": null,\r
+					"attribute2": null,\r
+					"attribute3": null,\r
+					"attribute4": null,\r
+					"attribute5": null\r
+				}\r
+			]\r
+		}\r
+	]\r
+}</con:request>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:environmentSpec>
+        <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:resource>
+    <con:resource name="1073" path="/work/v1/work-lists/1073" id="a77f8a71-7064-436c-ac39-40b0f3e5202b">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="1073" id="d15ab7c2-3584-4819-bea9-1def35c48fd1" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="New Request" id="a5c99894-1e7c-4ca3-9850-d599e767185b" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:environmentSpec>
+        <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:resource>
+    <con:resource name="Work-lines" path="/work/v1/work-lines" id="e2a9c47f-8531-46ef-be92-2f2bc5594656">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Work-lines" id="9fd63f62-511a-473c-a539-ec662a649750" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Work Line" id="5cbea4ce-d9b5-434a-afd1-e2ffcfd94fb3" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+          <con:request>{\r
+	"workLine": "GETPOSTLines",\r
+	"workListId": 1257,\r
+	"workLineStatus": {\r
+		"workStatusId": 151\r
+	},\r
+	"quantity": 1,\r
+	"workOperations": [{\r
+		"workOperation": "GETNewPrelines",\r
+		"sourceLocationId": 2,\r
+		"destinationLocationId": 3,\r
+		"sourceContainerId": 5,\r
+		"destinationContainerId": 4,\r
+		"quantity": 1,\r
+		"workOperationStatus": {\r
+			"workStatusId": 206\r
+		}\r
+	}]\r
+}</con:request>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:method name="Work-lines 2" id="498a9a18-8446-4c68-9962-8b02d2b06bf9" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>query</con:name>
+            <con:value>T.2023</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>T.2023</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:request name="Search With Query" id="6868c9ca-f091-40cd-a1d9-0ed41b439350" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters>
+            <con:entry key="query" value="T.2023"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>query</con:entry>
+          </con:parameterOrder>
+          <con:environmentSpec>
+            <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:environmentSpec>
+        <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:resource>
+    <con:resource name="5137" path="/work/v1/work-lines/5137" id="f417ffe9-4cf4-4cae-8110-fb65f7b3dfe2">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="5137" id="65e03941-e878-420a-8031-f44519c7e54d" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="GET WorkLines" id="78237d24-8a7d-41bf-ac24-2d157a4c9da2" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:method name="5137 2" id="9dcfbe31-0bb0-4330-8995-d915b86f0a8a" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="New Request Copy" id="01ac8a21-c142-4c13-b0db-d2bf16044961" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+          <con:request>{\r
+	"created": "2023-05-10T13:38:38.67",\r
+	"modified": null,\r
+	"createdBy": "HOST",\r
+	"modifiedBy": "dom",\r
+	"workLineId": 5119,\r
+	"workListId": 1155,\r
+	"workLine": "WB-TL002|1",\r
+	"workLineStatus": {\r
+		"created": null,\r
+		"modified": null,\r
+		"createdBy": null,\r
+		"modifiedBy": null,\r
+		"workStatusId": 155,\r
+		"workTier": "WorkLine",\r
+		"workTypeId": 5,\r
+		"workStatusValue": "COMPLETE",\r
+		"isEnabled": true\r
+	},\r
+	"priority": null,\r
+	"itemId": null,\r
+	"quantity": 10,\r
+	"quantityCompleted": 0,\r
+	"inventoryStatusId": null,\r
+	"expirationDate": null,\r
+	"fifoDate": null,\r
+	"stockRotationDate": null,\r
+	"lot": null,\r
+	"storageTypeId": null,\r
+	"comment": "new comment",\r
+	"started": null,\r
+	"completed": null,\r
+	"attribute1": null,\r
+	"attribute2": null,\r
+	"attribute3": null,\r
+	"attribute4": null,\r
+	"attribute5": null,\r
+	"workOperations": [\r
+		{\r
+			"created": "2023-05-10T13:38:38.813",\r
+			"modified": null,\r
+			"createdBy": "HOST",\r
+			"modifiedBy": "dom",\r
+			"workOperationId": 63,\r
+			"workListId": 1155,\r
+			"workLineId": 5119,\r
+			"workOperation": "WB-TL002|1|1",\r
+			"sourceLocationId": 1,\r
+			"destinationLocationId": 2,\r
+			"sourceContainerId": 3,\r
+			"destinationContainerId": 4,\r
+			"activityId": null,\r
+			"quantity": 1,\r
+			"inventoryStatusId": null,\r
+			"expirationDate": null,\r
+			"fifoDate": null,\r
+			"stockRotationDate": null,\r
+			"lot": null,\r
+			"storageTypeId": null,\r
+			"comment": null,\r
+			"workOperationStatus": {\r
+				"created": null,\r
+				"modified": null,\r
+				"createdBy": null,\r
+				"modifiedBy": null,\r
+				"workStatusId": 209,\r
+				"workTier": "WorkOperation",\r
+				"workTypeId": 5,\r
+				"workStatusValue": "CANCELED",\r
+				"isEnabled": true\r
+			},\r
+			"workStationId": null,\r
+			"started": null,\r
+			"ownedBy": null,\r
+			"completed": null,\r
+			"completedBy": null,\r
+			"attribute1": null,\r
+			"attribute2": null,\r
+			"attribute3": null,\r
+			"attribute4": null,\r
+			"attribute5": null\r
+		}\r
+	]\r
+}</con:request>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:environmentSpec>
+        <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:resource>
+    <con:resource name="1186" path="/work/v1/work-lines/work-list/1186" id="bc907ec3-6d48-47bd-b9a4-41bdec791910">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="1186" id="ce05aedf-8167-42ad-87ad-b465c656caf9" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="GetwithWorklistID" id="20f936b9-4c7c-4b2a-89b1-8c3b679bd700" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:environmentSpec>
+        <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:resource>
+    <con:resource name="5086" path="/work/v1/work-lines/5086" id="e46c5295-bc85-424e-a82f-2e6253fd652c">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="5086" id="ceed2eff-5863-4453-ba1d-8f17f2f54c35" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="New Request" id="607b940c-3fb3-4a26-8c02-6f88d6de793e" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+          <con:request>{\r
+	"workLine": "PrelinesUP",\r
+	"workListId": 1094,\r
+	"workLineStatus": {\r
+		"workStatusId": 151\r
+	},\r
+	"quantity": 1,\r
+	"workOperations": [{\r
+		"workOperation": "PostLinesUp",\r
+		"sourceLocationId": 2,\r
+		"destinationLocationId": 3,\r
+		"sourceContainerId": 5,\r
+		"destinationContainerId": 4,\r
+		"quantity": 1,\r
+		"workOperationStatus": {\r
+			"workStatusId": 206\r
+		}\r
+	}]\r
+}</con:request>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:environmentSpec>
+        <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:resource>
+    <con:resource name="Work-operations" path="/work/v1/work-operations" id="d5e5e0c7-a3fe-4065-8911-2e465b453cf4">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Work-operations" id="6204ac0f-1736-4e48-a468-5b89aa2d5c00" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Create Work Operation" id="390dc692-ccf8-4951-9617-1641ed23b57e" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+          <con:request>{\r
+	"workOperation": "TransfrOperation|1|1",\r
+	"workListId": 1094,\r
+	"workLineId": 5086,\r
+	"sourceLocationId": 1,\r
+	"destinationLocationId": 2,\r
+	"sourceContainerId": 3,\r
+	"destinationContainerId": 4,\r
+	"quantity": 1,\r
+	"workOperationStatus": {\r
+		"workStatusId": 204\r
+	}\r
+}</con:request>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:method name="Work-operations 2" id="99037bcc-198b-432c-bea8-d3ed8665f9eb" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>workOperation</con:name>
+            <con:value>Operation</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>Operation</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:request name="Serach with Query" id="05cf6a13-86a9-4cf6-ba1f-e3e6b661ec09" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters>
+            <con:entry key="workOperation" value="Operation"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>workOperation</con:entry>
+          </con:parameterOrder>
+          <con:environmentSpec>
+            <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:environmentSpec>
+        <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:resource>
+    <con:resource name="47" path="/work/v1/work-operations/47" id="4047d716-2553-4e2f-95c7-1380b223c04b">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="47" id="a952eb54-5f46-43a3-92a1-c7ac2bdb5844" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Updte Work Opertion" id="4c4b0073-91f8-466b-875b-827e17272a75" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+          <con:request>{\r
+	"workOperation": "TranrOperation|1|1|1",\r
+	"workListId": 1094,\r
+	"workLineId": 5086,\r
+	"sourceLocationId": 1,\r
+	"destinationLocationId": 2,\r
+	"sourceContainerId": 3,\r
+	"destinationContainerId": 4,\r
+	"quantity": 1,\r
+	"workOperationStatus": {\r
+		"workStatusId": 204\r
+	}\r
+}</con:request>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:method name="47 2" id="3417993d-2c6e-44de-aa23-5db4ad58e164" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Updte Work Opertion Copy" id="6538c346-b5ed-490c-8f5d-590908b0fb19" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+          <con:request>{\r
+	"workOperation": "TranrOperation|1|1|1",\r
+	"workListId": 1094,\r
+	"workLineId": 5086,\r
+	"sourceLocationId": 1,\r
+	"destinationLocationId": 2,\r
+	"sourceContainerId": 3,\r
+	"destinationContainerId": 4,\r
+	"quantity": 1,\r
+	"workOperationStatus": {\r
+		"workStatusId": 204\r
+	}\r
+}</con:request>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:method name="47 3" id="fde2ea99-b149-4755-92a5-be3bce57e16c" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="New Request" id="0bf1a13a-456b-49e5-a3b8-7c47d8b32173" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:environmentSpec>
+        <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:resource>
+    <con:resource name="5086" path="/work/v1/work-operations/1094/5086" id="02dd47ff-c550-4d25-8821-1db021b02d9a">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="5086" id="e58a9bf3-7532-40c5-9f28-82891153b05b" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Get with Worklistid and WorklineID" id="ec240855-64ec-4637-9479-51ebf4491270" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:environmentSpec>
+        <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:resource>
+    <con:resource name="WorkListId" path="/work/v1/work-operations/work-list/{workListId}" id="d917c3d7-98d4-4bfe-b8dd-2935ea855927">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="WorkListId" id="0fbf30e6-4f06-4a7b-bf0b-98d472cc58bd" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>workListId</con:name>
+            <con:value>1094</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>1094</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:request name="Get with Worklistid" id="3e88c87c-1c5e-426e-a8a4-f833a35ae6d1" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters>
+            <con:entry key="workListId" value="1094"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>workListId</con:entry>
+          </con:parameterOrder>
+          <con:environmentSpec>
+            <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:environmentSpec>
+        <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:resource>
+    <con:resource name="41" path="/work/v1/work-operations/41" id="35050ae2-8ce1-45f4-97ef-ad7ad1e0a015">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="41" id="d82b4543-dda0-4931-a416-5196b98c0dda" method="DELETE">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="New Request" id="8b714686-02b1-4315-bfe3-4bc9ada20266" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:environmentSpec>
+        <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:resource>
+    <con:resource name="1092" path="/work/v1/work-batches/1092" id="3685f80a-7fc5-4a66-91e4-826c91d5fb15">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="1092" id="49e5af0a-b946-4e46-93c1-548034e7a031" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Get with ID" id="f43c780a-9955-4814-8e98-82af1f988763" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:environmentSpec>
+        <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:resource>
+    <con:resource name="1004" path="/work/v1/work-batches/1004" id="4b5f100c-55f3-4ba3-b4d7-7bf1506c8ecd">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="1004" id="9e8d2ae5-6457-496e-8ba0-abc2cd60fc8a" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Updates" id="1dc41b92-5c1a-4c05-95a6-44d8136acfd8" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+          <con:request>{\r
+	"created": "2023-05-10T13:38:38.353",\r
+	"modified": "2023-05-12T09:23:04.077",\r
+	"createdBy": "HOST",\r
+	"modifiedBy": "DK",\r
+	"workBatchId": 1004,\r
+	"workBatch": "WB-T0001",\r
+	"workBatchStatus": {\r
+		"created": null,\r
+		"modified": null,\r
+		"createdBy": null,\r
+		"modifiedBy": null,\r
+		"workStatusId": 11,\r
+		"workTier": "WorkBatch",\r
+		"workTypeId": 1,\r
+		"workStatusValue": "COMPLETE",\r
+		"isEnabled": true\r
+	},\r
+	"priority": 1,\r
+	"priorityDateTime": "2023-05-03T06:24:48.333",\r
+	"scheduled": null,\r
+	"started": null,\r
+	"completed": null,\r
+	"attribute1": null,\r
+	"attribute2": null,\r
+	"attribute3": null,\r
+	"attribute4": null,\r
+	"attribute5": null,\r
+	"workLists": [\r
+		{\r
+			"created": "2023-05-10T13:38:38.527",\r
+			"modified": "2023-05-12T13:18:42.547",\r
+			"createdBy": "HOST",\r
+			"modifiedBy": "dom",\r
+			"workListId": 1155,\r
+			"clientId": null,\r
+			"workList": "WB-TL002",\r
+			"workStatus": {\r
+				"created": null,\r
+				"modified": null,\r
+				"createdBy": null,\r
+				"modifiedBy": null,\r
+				"workStatusId": 94,\r
+				"workTier": "WorkList",\r
+				"workTypeId": 5,\r
+				"workStatusValue": "COMPLETE",\r
+				"isEnabled": true\r
+			},\r
+			"workType": {\r
+				"created": null,\r
+				"modified": null,\r
+				"createdBy": null,\r
+				"modifiedBy": null,\r
+				"workTypeId": 5,\r
+				"workTypeValue": "Transfer",\r
+				"isEnabled": true,\r
+				"workSubTypeList": []\r
+			},\r
+			"workSubType": null,\r
+			"isHot": true,\r
+			"priority": 1,\r
+			"priorityDateTime": null,\r
+			"storageId": null,\r
+			"workBatchId": 1004,\r
+			"storageTypeId": null,\r
+			"comment": "Depends if MES sent a comment from host pick list",\r
+			"scheduled": null,\r
+			"started": null,\r
+			"completed": null,\r
+			"attribute1": null,\r
+			"attribute2": null,\r
+			"attribute3": null,\r
+			"attribute4": null,\r
+			"attribute5": null,\r
+			"workLines": [\r
+				{\r
+					"created": "2023-05-10T13:38:38.67",\r
+					"modified": "2023-05-12T13:19:26.37",\r
+					"createdBy": "HOST",\r
+					"modifiedBy": "dom",\r
+					"workLineId": 5119,\r
+					"workListId": 1155,\r
+					"workLine": "WB-TL002|1",\r
+					"workLineStatus": {\r
+						"created": null,\r
+						"modified": null,\r
+						"createdBy": null,\r
+						"modifiedBy": null,\r
+						"workStatusId": 155,\r
+						"workTier": "WorkLine",\r
+						"workTypeId": 5,\r
+						"workStatusValue": "COMPLETE",\r
+						"isEnabled": true\r
+					},\r
+					"priority": null,\r
+					"itemId": null,\r
+					"quantity": 10,\r
+					"quantityCompleted": 0,\r
+					"inventoryStatusId": null,\r
+					"expirationDate": null,\r
+					"fifoDate": null,\r
+					"stockRotationDate": null,\r
+					"lot": null,\r
+					"storageTypeId": null,\r
+					"comment": "new comment",\r
+					"started": null,\r
+					"completed": null,\r
+					"attribute1": null,\r
+					"attribute2": null,\r
+					"attribute3": null,\r
+					"attribute4": null,\r
+					"attribute5": null,\r
+					"workOperations": [\r
+						{\r
+							"created": "2023-05-10T13:38:38.813",\r
+							"modified": null,\r
+							"createdBy": "HOST",\r
+							"modifiedBy": "dom",\r
+							"workOperationId": 63,\r
+							"workListId": 1155,\r
+							"workLineId": 5119,\r
+							"workOperation": "WB-TL002|1|1",\r
+							"sourceLocationId": 1,\r
+							"destinationLocationId": 2,\r
+							"sourceContainerId": 3,\r
+							"destinationContainerId": 4,\r
+							"activityId": null,\r
+							"quantity": 1,\r
+							"inventoryStatusId": null,\r
+							"expirationDate": null,\r
+							"fifoDate": null,\r
+							"stockRotationDate": null,\r
+							"lot": null,\r
+							"storageTypeId": null,\r
+							"comment": null,\r
+							"workOperationStatus": {\r
+								"created": null,\r
+								"modified": null,\r
+								"createdBy": null,\r
+								"modifiedBy": null,\r
+								"workStatusId": 209,\r
+								"workTier": "WorkOperation",\r
+								"workTypeId": 5,\r
+								"workStatusValue": "CANCELED",\r
+								"isEnabled": true\r
+							},\r
+							"workStationId": null,\r
+							"started": null,\r
+							"ownedBy": null,\r
+							"completed": null,\r
+							"completedBy": null,\r
+							"attribute1": null,\r
+							"attribute2": null,\r
+							"attribute3": null,\r
+							"attribute4": null,\r
+							"attribute5": null\r
+						}\r
+					]\r
+				}\r
+			]\r
+		}\r
+	]\r
+}</con:request>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:environmentSpec>
+        <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="f750f794-7947-4339-a65c-66d6a9d00455" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://wes-qa.kpiopto.com:53140" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints/>
+    <con:environmentSpec>
+      <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+    <con:resource name="Work-batches" path="/work/v1/work-batches" id="f6c32368-78e7-4c07-86c0-20442f08cd05">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Work-batches" id="09a9d54b-ce07-4ae9-abde-69806d43491c" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Create work batches" id="6dc960cc-49a4-4f37-8112-2c07e7b578a9" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>http://wes-qa.kpiopto.com:53140</con:endpoint>
+          <con:request>{\r
+	"workBatch": "WB-TJ0015",\r
+	"priority": 1,\r
+	"priorityDateTime": "2023-05-03T06:24:48.334Z",\r
+	"workBatchStatus": {\r
+		"workStatusId": 1\r
+	},\r
+	"workLists": [{\r
+		"workList": "WB-TJD015",\r
+		"workStatus": {\r
+			"workStatusId": 84\r
+		},\r
+		"workType": {\r
+			"workTypeId": 5\r
+		},\r
+		"isHot": false,\r
+		"comment": "Depends if MES sent a comment from host adapter pick list",\r
+		"workLines": [{\r
+			"workLine": "WB-TJD015|1",\r
+			"workLineStatus": {\r
+				"workStatusId": 151\r
+			},\r
+			"quantity": 1,\r
+			"workOperations": [{\r
+				"workOperation": "WB-TJD015|1|1",\r
+				"sourceLocationId": 1,\r
+				"destinationLocationId": 2,\r
+				"sourceContainerId": 3,\r
+				"destinationContainerId": 4,\r
+				"quantity": 1,\r
+				"workOperationStatus": {\r
+					"workStatusId": 204\r
+				}\r
+			}]\r
+		}]\r
+	}]\r
+}</con:request>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:parameters/>
+          <con:environmentSpec>
+            <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+              <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+          </con:environmentSpec>
+        </con:request>
+        <con:environmentSpec>
+          <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+            <con:authProfile>Inherit From Parent</con:authProfile>
+          </con:entry>
+        </con:environmentSpec>
+      </con:method>
+      <con:environmentSpec>
+        <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="b839cac6-52a4-4e3a-97b1-f810981f64c4" name="Test Suite 1">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="a98b99a6-28f2-4831-8fee-1ac7d2451260" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Work services 185_1" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="Work-lists - Create WorkList" id="ddf98279-a7ee-4375-906d-7f7ab05425aa">
+        <con:settings/>
+        <con:config service="http://wes-dev.kpiopto.com:53140tttt" resourcePath="/work/v1/work-lists" methodName="Work-lists" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Work-lists - Create WorkList" id="110e532e-c613-4c15-a54e-645c248cd6e2" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+            <con:request>{\r
+	"workList": "WareTeTranTRS2",\r
+	"workStatus": {\r
+		"workStatusId": 84\r
+	},\r
+	"workType": {\r
+		"workTypeId": 5\r
+	},\r
+	"isHot": false,\r
+	"comment": "Depends if MES sent a comment from host adapter pick list",\r
+	"workLines": [{\r
+		"workLine": "Transfertoware",\r
+		"workLineStatus": {\r
+			"workStatusId": 151\r
+		},\r
+		"quantity": 1,\r
+		"workOperations": [{\r
+			"workOperation": "Transfertoware|1",\r
+			"sourceLocationId": 1,\r
+			"destinationLocationId": 2,\r
+			"sourceContainerId": 3,\r
+			"destinationContainerId": 4,\r
+			"quantity": 1,\r
+			"workOperationStatus": {\r
+				"workStatusId": 204\r
+			}\r
+		}]\r
+	}]\r
+}</con:request>
+            <con:originalUri>http://wes-dev.kpiopto.com/work/v1/work-lists</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:environmentSpec>
+              <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="1257 - GET with WorklistID" id="af016a63-795b-4c09-a24a-d58bae87265e">
+        <con:settings/>
+        <con:config service="http://wes-dev.kpiopto.com:53140tttt" resourcePath="/work/v1/work-lists/1257" methodName="1257" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="1257 - GET with WorklistID" id="9a0a3087-5688-4c6b-8d92-33eb56f632c7" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://wes-dev.kpiopto.com/work/v1/work-lists/1257</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:environmentSpec>
+              <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="1186 - Update worklist" id="03473333-d976-4401-93a8-d88c04d464c1">
+        <con:settings/>
+        <con:config service="http://wes-dev.kpiopto.com:53140tttt" resourcePath="/work/v1/work-lists/1186" methodName="1186" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="1186 - Update worklist" id="1ab26b1f-5ca6-4ca8-8bba-6eaebf8fb06a" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+            <con:request>{\r
+	"workList": "WareTeTranTRS3up",\r
+	"workStatus": {\r
+		"workStatusId": 84\r
+	},\r
+	"workType": {\r
+		"workTypeId": 5\r
+	},\r
+	"isHot": false,\r
+	"comment": "Depends if MES sent a comment from host adapter pick list to WES",\r
+	"workLines": [{\r
+		"workLine": "WaresTransfersup",\r
+		"workLineStatus": {\r
+			"workStatusId": 152\r
+		},\r
+		"quantity": 1,\r
+		"workOperations": [{\r
+			"workOperation": "wareTransferLiup|3",\r
+			"sourceLocationId": 1,\r
+			"destinationLocationId": 2,\r
+			"sourceContainerId": 3,\r
+			"destinationContainerId": 4,\r
+			"quantity": 1,\r
+			"workOperationStatus": {\r
+				"workStatusId": 204\r
+			}\r
+		}]\r
+	}]\r
+}</con:request>
+            <con:originalUri>http://wes-dev.kpiopto.com/work/v1/work-lists/1186</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:environmentSpec>
+              <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="1186 2 - Update worklist Copy" id="45768e1d-c2ef-49e9-afe7-526301a7e44c">
+        <con:settings/>
+        <con:config service="http://wes-dev.kpiopto.com:53140tttt" resourcePath="/work/v1/work-lists/1186" methodName="1186 2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="1186 2 - Update worklist Copy" id="049b1bc1-fdc2-4764-b7f7-fbafb005a620" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+            <con:request>{\r
+	"created": "2023-05-10T13:38:38.527",\r
+	"modified": null,\r
+	"createdBy": "HOST",\r
+	"modifiedBy": "dom",\r
+	"workListId": 1155,\r
+	"clientId": null,\r
+	"workList": "WB-TL002",\r
+	"workStatus": {\r
+		"created": null,\r
+		"modified": null,\r
+		"createdBy": null,\r
+		"modifiedBy": null,\r
+		"workStatusId": 94,\r
+		"workTier": "WorkList",\r
+		"workTypeId": 5,\r
+		"workStatusValue": "COMPLETE",\r
+		"isEnabled": true\r
+	},\r
+	"workType": {\r
+		"created": null,\r
+		"modified": null,\r
+		"createdBy": null,\r
+		"modifiedBy": null,\r
+		"workTypeId": 5,\r
+		"workTypeValue": "Transfer",\r
+		"isEnabled": true,\r
+		"workSubTypeList": []\r
+	},\r
+	"workSubType": null,\r
+	"isHot": true,\r
+	"priority": 1,\r
+	"priorityDateTime": null,\r
+	"storageId": null,\r
+	"workBatchId": 1004,\r
+	"storageTypeId": null,\r
+	"comment": "Depends if MES sent a comment from host pick list",\r
+	"scheduled": null,\r
+	"started": null,\r
+	"completed": null,\r
+	"attribute1": null,\r
+	"attribute2": null,\r
+	"attribute3": null,\r
+	"attribute4": null,\r
+	"attribute5": null,\r
+	"workLines": [\r
+		{\r
+			"created": "2023-05-10T13:38:38.67",\r
+			"modified": null,\r
+			"createdBy": "HOST",\r
+			"modifiedBy": "dom",\r
+			"workLineId": 5119,\r
+			"workListId": 1155,\r
+			"workLine": "WB-TL002|1",\r
+			"workLineStatus": {\r
+				"created": null,\r
+				"modified": null,\r
+				"createdBy": null,\r
+				"modifiedBy": null,\r
+				"workStatusId": 155,\r
+				"workTier": "WorkLine",\r
+				"workTypeId": 5,\r
+				"workStatusValue": "COMPLETE",\r
+				"isEnabled": true\r
+			},\r
+			"priority": null,\r
+			"itemId": null,\r
+			"quantity": 1,\r
+			"quantityCompleted": 0,\r
+			"inventoryStatusId": null,\r
+			"expirationDate": null,\r
+			"fifoDate": null,\r
+			"stockRotationDate": null,\r
+			"lot": null,\r
+			"storageTypeId": null,\r
+			"comment": null,\r
+			"started": null,\r
+			"completed": null,\r
+			"attribute1": null,\r
+			"attribute2": null,\r
+			"attribute3": null,\r
+			"attribute4": null,\r
+			"attribute5": null,\r
+			"workOperations": [\r
+				{\r
+					"created": "2023-05-10T13:38:38.813",\r
+					"modified": null,\r
+					"createdBy": "HOST",\r
+					"modifiedBy": "dom",\r
+					"workOperationId": 63,\r
+					"workListId": 1155,\r
+					"workLineId": 5119,\r
+					"workOperation": "WB-TL002|1|1",\r
+					"sourceLocationId": 1,\r
+					"destinationLocationId": 2,\r
+					"sourceContainerId": 3,\r
+					"destinationContainerId": 4,\r
+					"activityId": null,\r
+					"quantity": 1,\r
+					"inventoryStatusId": null,\r
+					"expirationDate": null,\r
+					"fifoDate": null,\r
+					"stockRotationDate": null,\r
+					"lot": null,\r
+					"storageTypeId": null,\r
+					"comment": null,\r
+					"workOperationStatus": {\r
+						"created": null,\r
+						"modified": null,\r
+						"createdBy": null,\r
+						"modifiedBy": null,\r
+						"workStatusId": 209,\r
+						"workTier": "WorkOperation",\r
+						"workTypeId": 5,\r
+						"workStatusValue": "CANCELED",\r
+						"isEnabled": true\r
+					},\r
+					"workStationId": null,\r
+					"started": null,\r
+					"ownedBy": null,\r
+					"completed": null,\r
+					"completedBy": null,\r
+					"attribute1": null,\r
+					"attribute2": null,\r
+					"attribute3": null,\r
+					"attribute4": null,\r
+					"attribute5": null\r
+				}\r
+			]\r
+		}\r
+	]\r
+}</con:request>
+            <con:originalUri>http://wes-dev.kpiopto.com/work/v1/work-lists/1186</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:environmentSpec>
+              <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="1073 - New Request" id="8e924a5a-a6f0-4a09-8641-8545d38b1ae5">
+        <con:settings/>
+        <con:config service="http://wes-dev.kpiopto.com:53140tttt" resourcePath="/work/v1/work-lists/1073" methodName="1073" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="1073 - New Request" id="a5c99894-1e7c-4ca3-9850-d599e767185b" mediaType="application/json" postQueryString="false">
+            <con:settings/>
+            <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://wes-dev.kpiopto.com/work/v1/work-lists/1073</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:environmentSpec>
+              <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Work-lines - Work Line" id="571a292c-6a95-4f6a-a6e0-52679e7b2b6f">
+        <con:settings/>
+        <con:config service="http://wes-dev.kpiopto.com:53140tttt" resourcePath="/work/v1/work-lines" methodName="Work-lines" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Work-lines - Work Line" id="5cbea4ce-d9b5-434a-afd1-e2ffcfd94fb3" mediaType="application/json" postQueryString="false">
+            <con:settings/>
+            <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+            <con:request>{\r
+	"workLine": "GETPOSTLines",\r
+	"workListId": 1257,\r
+	"workLineStatus": {\r
+		"workStatusId": 151\r
+	},\r
+	"quantity": 1,\r
+	"workOperations": [{\r
+		"workOperation": "GETNewPrelines",\r
+		"sourceLocationId": 2,\r
+		"destinationLocationId": 3,\r
+		"sourceContainerId": 5,\r
+		"destinationContainerId": 4,\r
+		"quantity": 1,\r
+		"workOperationStatus": {\r
+			"workStatusId": 206\r
+		}\r
+	}]\r
+}</con:request>
+            <con:originalUri>http://wes-dev.kpiopto.com/work/v1/work-lines</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:environmentSpec>
+              <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="5137 - GET WorkLines" id="025ed5f0-aed8-407a-94fd-38255c4b2425">
+        <con:settings/>
+        <con:config service="http://wes-dev.kpiopto.com:53140tttt" resourcePath="/work/v1/work-lines/5137" methodName="5137" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="5137 - GET WorkLines" id="78237d24-8a7d-41bf-ac24-2d157a4c9da2" mediaType="application/json">
+            <con:settings/>
+            <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://wes-dev.kpiopto.com/work/v1/work-lines/5137</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:environmentSpec>
+              <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="1186 - GetwithWorklistID" id="ae2f35c8-36e6-4917-a463-320eec693d55">
+        <con:settings/>
+        <con:config service="http://wes-dev.kpiopto.com:53140tttt" resourcePath="/work/v1/work-lines/work-list/1186" methodName="1186" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="1186 - GetwithWorklistID" id="20f936b9-4c7c-4b2a-89b1-8c3b679bd700" mediaType="application/json">
+            <con:settings/>
+            <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://wes-dev.kpiopto.com/work/v1/work-lines/work-list/1186</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:environmentSpec>
+              <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Work-lines 2 - Search With Query" id="1e9f4995-87b7-42b3-b7e7-d9963672dd8a">
+        <con:settings/>
+        <con:config service="http://wes-dev.kpiopto.com:53140tttt" resourcePath="/work/v1/work-lines" methodName="Work-lines 2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Work-lines 2 - Search With Query" id="6868c9ca-f091-40cd-a1d9-0ed41b439350" mediaType="application/json">
+            <con:settings/>
+            <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://wes-dev.kpiopto.com/work/v1/work-lines</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:parameterOrder>
+              <con:entry>query</con:entry>
+            </con:parameterOrder>
+            <con:environmentSpec>
+              <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="5086 - New Request" id="05ff5b95-6dfc-47d8-9d3d-dcc612815563">
+        <con:settings/>
+        <con:config service="http://wes-dev.kpiopto.com:53140tttt" resourcePath="/work/v1/work-lines/5086" methodName="5086" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="5086 - New Request" id="607b940c-3fb3-4a26-8c02-6f88d6de793e" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+            <con:request>{\r
+   "workLine" : "PrelinesUP",\r
+   "workListId" : 1094,\r
+   "workLineStatus" : {\r
+      "workStatusId" : 151\r
+   },\r
+   "quantity" : 1,\r
+   "workOperations" : [\r
+      {\r
+         "workOperation" : "PostLinesUp",\r
+         "sourceLocationId" : 2,\r
+         "destinationLocationId" : 3,\r
+         "sourceContainerId" : 5,\r
+         "destinationContainerId" : 4,\r
+         "quantity" : 1,\r
+         "workOperationStatus" : {\r
+            "workStatusId" : 206\r
+         }\r
+      }\r
+   ]\r
+}</con:request>
+            <con:originalUri>http://wes-dev.kpiopto.com/work/v1/work-lines/5086</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:environmentSpec>
+              <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="5137 2 - New Request Copy" id="64054f6f-a216-49d4-8768-cba52b431a85">
+        <con:settings/>
+        <con:config service="http://wes-dev.kpiopto.com:53140tttt" resourcePath="/work/v1/work-lines/5137" methodName="5137 2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="5137 2 - New Request Copy" id="01ac8a21-c142-4c13-b0db-d2bf16044961" mediaType="application/json" postQueryString="false">
+            <con:settings/>
+            <con:endpoint>http://wes-dev.kpiopto.com:53140</con:endpoint>
+            <con:request>{\r
+	"created": "2023-05-10T13:38:38.67",\r
+	"modified": null,\r
+	"createdBy": "HOST",\r
+	"modifiedBy": "dom",\r
+	"workLineId": 5119,\r
+	"workListId": 1155,\r
+	"workLine": "WB-TL002|1",\r
+	"workLineStatus": {\r
+		"created": null,\r
+		"modified": null,\r
+		"createdBy": null,\r
+		"modifiedBy": null,\r
+		"workStatusId": 155,\r
+		"workTier": "WorkLine",\r
+		"workTypeId": 5,\r
+		"workStatusValue": "COMPLETE",\r
+		"isEnabled": true\r
+	},\r
+	"priority": null,\r
+	"itemId": null,\r
+	"quantity": 10,\r
+	"quantityCompleted": 0,\r
+	"inventoryStatusId": null,\r
+	"expirationDate": null,\r
+	"fifoDate": null,\r
+	"stockRotationDate": null,\r
+	"lot": null,\r
+	"storageTypeId": null,\r
+	"comment": "new comment",\r
+	"started": null,\r
+	"completed": null,\r
+	"attribute1": null,\r
+	"attribute2": null,\r
+	"attribute3": null,\r
+	"attribute4": null,\r
+	"attribute5": null,\r
+	"workOperations": [\r
+		{\r
+			"created": "2023-05-10T13:38:38.813",\r
+			"modified": null,\r
+			"createdBy": "HOST",\r
+			"modifiedBy": "dom",\r
+			"workOperationId": 63,\r
+			"workListId": 1155,\r
+			"workLineId": 5119,\r
+			"workOperation": "WB-TL002|1|1",\r
+			"sourceLocationId": 1,\r
+			"destinationLocationId": 2,\r
+			"sourceContainerId": 3,\r
+			"destinationContainerId": 4,\r
+			"activityId": null,\r
+			"quantity": 1,\r
+			"inventoryStatusId": null,\r
+			"expirationDate": null,\r
+			"fifoDate": null,\r
+			"stockRotationDate": null,\r
+			"lot": null,\r
+			"storageTypeId": null,\r
+			"comment": null,\r
+			"workOperationStatus": {\r
+				"created": null,\r
+				"modified": null,\r
+				"createdBy": null,\r
+				"modifiedBy": null,\r
+				"workStatusId": 209,\r
+				"workTier": "WorkOperation",\r
+				"workTypeId": 5,\r
+				"workStatusValue": "CANCELED",\r
+				"isEnabled": true\r
+			},\r
+			"workStationId": null,\r
+			"started": null,\r
+			"ownedBy": null,\r
+			"completed": null,\r
+			"completedBy": null,\r
+			"attribute1": null,\r
+			"attribute2": null,\r
+			"attribute3": null,\r
+			"attribute4": null,\r
+			"attribute5": null\r
+		}\r
+	]\r
+}</con:request>
+            <con:originalUri>http://wes-dev.kpiopto.com/work/v1/work-lines/5137</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:environmentSpec>
+              <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+            </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:environmentSpec>
+        <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+    <con:environmentSpec>
+      <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+        <con:authProfile>Inherit From Parent</con:authProfile>
+      </con:entry>
+    </con:environmentSpec>
+  </con:testSuite>
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:environment id="3601ca7f-bdb3-4d86-8d66-4bca018608b3" name="QA" index="0">
+    <con:service type="REST" name="http://wes-dev.kpiopto.com:53140tttt">
+      <con:endpoint authProfile="No Authorization" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">http://wes-qa.kpiopto.com:53140</con:endpoint>
+    </con:service>
+    <con:databaseConnectionContainer/>
+    <con:jmsConnectionContainer/>
+  </con:environment>
+  <con:authRepository/>
+  <con:environmentSpec>
+    <con:entry environmentId="3601ca7f-bdb3-4d86-8d66-4bca018608b3">
+      <con:authProfile>No Authorization</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+  <con:tags/>
+</con:soapui-project>
